@@ -33,13 +33,18 @@ export default class BaseButton extends React.PureComponent {
   }
 
   render() {
-
-
-    return (<div>
-       
-      <button className={this.classes()} disabled={this.disabled} type={this.type} name={this.name}>{this.label}</button>
-      <a className={this.classes()} href={this.href} target={this.target}>{this.label}</a>
-
-    </div>)
+    if (this.href === ""){
+      return (
+        <div className="BaseButtonWrapper">
+          <button className={this.classes()} disabled={this.disabled} type={this.type} name={this.name}>{this.label}</button>
+        </div>
+      )
+    } else {
+      return (
+        <div className="BaseButtonWrapper">
+          <a className={this.classes()} href={this.href} target={this.target}>{this.label}</a>
+        </div>
+      )
+    }
   }
 }

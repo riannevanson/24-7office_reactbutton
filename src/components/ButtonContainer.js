@@ -3,14 +3,17 @@ import BaseButton from './BaseButton'
 
 
 class ButtonContainer extends React.PureComponent {
-label = "pietje"
-buttonType = "jaapie"
-size = "large"
-color = "Brand-blue"
-customTheme = false
-disabled = false
-href = ''
-target = ''
+
+    label = "button"
+    color =  "Brand-blue"
+    buttonType = 'default'
+    size = "large"
+    customTheme = false
+    disabled = false
+    href = ''
+    target = ''
+    type = "button"
+    name = "button"
 
   render() {
   
